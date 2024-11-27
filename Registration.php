@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("ssss", $username, $password, $email, $full_name);
 
     if ($stmt->execute()) {
-        header("Location: login.html");
+        header("Location: index.html");
         exit();
     } else {
         echo "Error: " . $stmt->error;

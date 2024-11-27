@@ -1,20 +1,3 @@
-<?php
-$conn = new mysqli('localhost', 'root', '', 'web_assignment');
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$result = $conn->query("SELECT * FROM products");
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
-    $stmt = $conn->prepare("DELETE FROM products WHERE id = ?");
-    $stmt->bind_param("i", $_POST['delete_id']);
-    $stmt->execute();
-    $stmt->close();
-    header("Location: product.php");
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

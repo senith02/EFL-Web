@@ -4,13 +4,21 @@ body {
     margin: 0;
     padding: 0;
 }
-.page{
+
+.page {
     display: flex;
     justify-content: center;
 }
 
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
 .container {
-    width: 25%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
     background: #fff;
@@ -42,6 +50,21 @@ form button {
 }
 
 form button:hover {
+    background-color: #4cae4c;
+}
+
+.register-button {
+    display: inline-block;
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.register-button:hover {
     background-color: #4cae4c;
 }
 

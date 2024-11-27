@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt->fetch() && password_verify($password, $hashed_password)) {
         $_SESSION['user_id'] = $id;
-        header("Location: dashboard.php");
+        header("Location: product.php");
         exit;
     } else {
         echo "Invalid credentials!";
